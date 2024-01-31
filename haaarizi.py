@@ -1,3 +1,4 @@
+# BY WAEL HARIZI
 import tkinter as tk
 import webbrowser
 window=tk.Tk()
