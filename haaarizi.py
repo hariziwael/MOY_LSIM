@@ -3,7 +3,7 @@ import tkinter as tk
 import webbrowser
 window=tk.Tk()
 window.title('LSIM1')
-window.geometry('780x450')
+window.geometry('924x450')
 window.configure(background="#708fa2")
 def insta():
     webbrowser.open("https://www.instagram.com/haaarizi?igsh=MzRlODBiNWFlZA==")
@@ -54,10 +54,11 @@ def RES():
          result10 = num24*0.4 + num25*0.4 + num26*0.2
          result=(result1*1.5+result2*1.5+result3*2+result4*1.5+result5*1.5+result6*2+result7*1.5+result8*1.5+result9+result10)/15
          #Update the Button with the result
+         res=round(result, 2)
          if result>=10:
-             btnRES.config(text=f"{result} MABROUUK")
+             btnRES.config(text=f"{res} MABROUUK")
          else:
-             btnRES.config(text=f"{result} GOOD LUCK \U0001F622")
+             btnRES.config(text=f"{res} GOOD LUCK\U0001F622")
      except (ValueError, SyntaxError):
          # Handle the case where the input is not a valid number
          btnRES.config(text='Please enter valid numbers')
@@ -211,5 +212,4 @@ btn1.grid(row=10, column=0,pady=5,padx=5)
 btninsta=tk.Button(text="follow me", command=insta , padx=5, pady=3,font=('Arial Bold',15),bg="lightblue",relief=tk.FLAT)
 btninsta.grid(row=10, column=5,pady=5,padx=5)
 window.mainloop()
-
 
